@@ -1,6 +1,6 @@
 # Afterglow
 
-**A Uniswap v4 pool that wakes up gently.** Built for the UHI Build Your First Hook quest.
+**A Uniswap v4 pool that wakes up gently.**
 
 Afterglow temporarily raises a pool's LP fee when swaps resume after inactivity, then returns it to normal over ten blocks. **Ten swaps in one block do not count as ten blocks of recovery.**
 
@@ -86,7 +86,7 @@ CI runs formatting, build and the full suite.
 
 ## Deployment
 
-The quest requires a public repository, not a funded on-chain deployment. A testnet deployment script is included.
+A testnet deployment script is included; a funded on-chain deployment is not required.
 
 Export `POOL_MANAGER` with the official deployed PoolManager for your target chain and `RPC_URL` with its RPC. Verify the address in [Uniswap's deployment documentation](https://developers.uniswap.org/docs/protocols/v4/deployments). The chain must support Cancun and Foundry's default CREATE2 deployer at `0x4e59b44847b379578588920cA78FbF26c0B4956C`.
 
@@ -112,18 +112,6 @@ The script mines a salt for the callback flags and validates the address. It dep
 - Zero-delta swaps do not update activity, although Uniswap can still move the tick through empty liquidity.
 - Quotes may change before inclusion. Use router slippage controls.
 - Constants are demonstration choices, not calibrated economic parameters. This is unaudited educational code.
-
-## Quest submission
-
-**Have you built your first hook?** Yes.
-
-**Repository:** https://github.com/VedanshShuklaa/afterglow-hook
-
-Optional description:
-
-> I built Afterglow, a Uniswap v4 hook that raises the LP fee after 30 minutes of inactivity and returns it from 1.00% to 0.30% over ten blocks. Recovery follows elapsed blocks rather than swap count, and only executed swaps update activity. Includes PoolManager integration tests, fuzz tests, a local demo and a CREATE2 deployment script.
-
-Fill in your UHI email and answer workshop/curriculum questions based on what you have completed.
 
 ## References and attribution
 
