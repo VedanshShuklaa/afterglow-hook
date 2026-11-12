@@ -1,0 +1,11 @@
+{
+  "lib/v4-core": {
+    "rev": "bea7f6d1c11cd5dc4f0d5151ffa37a1c239feee6"
+  },
+  "lib/uniswap-hooks": {
+    "tag": {
+      "name": "v1.2.1",
+      "rev": "acbd604c409a827f7f98c9517236da860c4fca1a"
+    }
+  }
+}

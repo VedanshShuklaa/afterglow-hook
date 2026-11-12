@@ -1,0 +1,15 @@
+[profile.default]
+src = "src"
+test = "test"
+script = "script"
+out = "out"
+libs = ["lib"]
+solc_version = "0.8.26"
+evm_version = "cancun"
+optimizer = true
+optimizer_runs = 200
+auto_detect_remappings = false
+remappings = ["@uniswap/v4-core/=lib/v4-core/", "@openzeppelin/uniswap-hooks/=lib/uniswap-hooks/", "forge-std/=lib/v4-core/lib/forge-std/src/", "solmate/=lib/v4-core/lib/solmate/", "@openzeppelin/contracts/=lib/v4-core/lib/openzeppelin-contracts/contracts/"]
+
+[profile.default.fuzz]
+runs = 256
